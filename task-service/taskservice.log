@@ -1,0 +1,3 @@
+time=2024-09-13T01:13:28.591+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T01:14:11.491+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T01:15:57.005+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"

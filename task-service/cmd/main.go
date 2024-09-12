@@ -2,10 +2,12 @@ package main
 
 import (
 	"log"
+	"log/slog"
 	"net/http"
 	"taskservice/internal/handlers"
 	"taskservice/internal/storage"
 	"taskservice/pkg/kafka"
+	"taskservice/pkg/logging"
 )
 
 const (
@@ -13,6 +15,9 @@ const (
 )
 
 func main() {
+	logging.LogInit()
+	slog.SetDefault(logging.Logger)
+
 	err := storage.Connect()
 	if err != nil {
 		log.Fatal(err)

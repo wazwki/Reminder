@@ -26,7 +26,7 @@ func Connect() {
 			case err := <-Producer.Errors():
 				log.Printf("Failed to send message: %v", err)
 			case success := <-Producer.Successes():
-				log.Printf("Message sent to partition %d with offset %d\\n", success.Partition, success.Offset)
+				log.Printf("Message sent to partition %d with offset %d", success.Partition, success.Offset)
 			}
 		}
 	}()

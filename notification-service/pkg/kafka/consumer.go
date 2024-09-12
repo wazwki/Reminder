@@ -24,9 +24,9 @@ func Connect() {
 		for {
 			select {
 			case message := <-partitionConsumer.Messages():
-				log.Printf("Received message: %s\\n", string(message.Value))
+				log.Printf("Received message: %s", string(message.Value))
 			case err := <-partitionConsumer.Errors():
-				log.Printf("Error: %s\\n", err.Err)
+				log.Printf("Error: %s", err.Err)
 			}
 		}
 	}()
