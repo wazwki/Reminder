@@ -4,11 +4,22 @@ import (
 	"log"
 	"log/slog"
 	"net/http"
+	"path/filepath"
+	"strings"
 	"taskservice/internal/handlers"
 	"taskservice/internal/storage"
 	"taskservice/pkg/kafka"
 	"taskservice/pkg/logging"
+	"taskservice/pkg/metrics"
+
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
+
+// @title Example API
+// @version 1.0
+// @description This is a sample server.
+// @host localhost:8080
+// @BasePath /
 
 const (
 	host = "localhost:8080"
@@ -39,8 +50,21 @@ func main() {
 	mux.HandleFunc("PUT /tasks/{id}", handlers.UpdateTask)
 	mux.HandleFunc("POST /tasks", handlers.CreateTask)
 	mux.HandleFunc("DELETE /tasks/{id}", handlers.DeleteTask)
+	mux.HandleFunc("/swagger/", serveSwagger)
+	mux.Handle("/metrics", promhttp.Handler())
 
-	if err := http.ListenAndServe(host, mux); err != nil {
+	metricsMux := metrics.MetricsMiddleware(mux)
+
+	if err := http.ListenAndServe(host, metricsMux); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func serveSwagger(w http.ResponseWriter, r *http.Request) {
+	p := strings.TrimPrefix(r.URL.Path, "/swagger/")
+	if p == "" {
+		p = "index.html"
+	}
+	p = filepath.Join("cmd", "swagger", "docs", p)
+	http.ServeFile(w, r, p)
 }

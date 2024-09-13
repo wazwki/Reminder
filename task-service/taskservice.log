@@ -1,3 +1,21 @@
 time=2024-09-13T01:13:28.591+03:00 level=INFO source=:0 msg=Started
 time=2024-09-13T01:14:11.491+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
 time=2024-09-13T01:15:57.005+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T02:42:23.775+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T02:43:42.889+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T02:46:56.572+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T02:47:12.565+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T02:51:11.951+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T02:51:20.199+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T03:01:09.474+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:01:19.592+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T03:05:17.479+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:05:26.684+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T03:07:20.891+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:07:25.338+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T03:09:39.705+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:09:53.440+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T03:22:24.069+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:22:29.405+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"
+time=2024-09-13T09:55:18.186+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T09:57:04.934+03:00 level=INFO source=:0 msg="http: superfluous response.WriteHeader call from taskservice/internal/handlers.CreateTask (handlers.go:66)"

@@ -1,9 +1,9 @@
-version: '2'
 services:
   zookeeper:
     image: 1977cbd14810d707fe6faf33c99945d11702804732b63d99f5e5a060308a360c
     ports:
       - "2181:2181"
+
   kafka:
     image: 2b4d19d1635cbeee8a2b38723cdd263bfd7e84123021060d5e91c7157bbf624e
     ports:
@@ -13,3 +13,41 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
+  postgres:
+    image: 69092dbdec0ddd9e1860e67be2c040b83cce9ffec785b2f740f34e8eb43178e5
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_USER: admin
+      POSTGRES_DB: gotest
+
+  prometheus:
+    image: 0fbb3f252560ca2693d507d690da15a1fc3209e158ee2381b513190a4e54d1fe
+    container_name: prometheus
+    volumes:
+      - ./prometheus:/etc/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - "9090:9090"
+  
+  grafana:
+    image: b7915a5be6d2fa709592ef8f69af34778345e7af6e879259fb718801106d7169
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
+
+volumes:
+  grafana-storage:

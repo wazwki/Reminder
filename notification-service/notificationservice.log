@@ -15,3 +15,23 @@ time=2024-09-13T01:15:51.079+03:00 level=INFO source=:0 msg="Received message: t
 time=2024-09-13T01:15:53.620+03:00 level=INFO source=:0 msg="Received message: task_deleted\\n"
 time=2024-09-13T01:15:57.009+03:00 level=INFO source=:0 msg="Received message: task_created\\n"
 time=2024-09-13T01:16:14.896+03:00 level=INFO source=:0 msg="Received message: task_updated\\n"
+time=2024-09-13T02:41:55.963+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T02:43:42.939+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T02:46:49.036+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T02:47:12.616+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T02:51:09.655+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T02:51:20.205+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T03:00:55.644+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:01:19.644+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T03:05:26.690+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T03:07:25.343+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T03:09:35.229+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:09:53.491+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T03:22:14.589+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T03:22:29.411+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T03:22:35.789+03:00 level=INFO source=:0 msg="Received message: task_updated"
+time=2024-09-13T03:22:43.004+03:00 level=INFO source=:0 msg="Received message: task_deleted"
+time=2024-09-13T09:54:57.553+03:00 level=INFO source=:0 msg=Started
+time=2024-09-13T09:57:04.985+03:00 level=INFO source=:0 msg="Received message: task_created"
+time=2024-09-13T09:57:10.817+03:00 level=INFO source=:0 msg="Received message: task_updated"
+time=2024-09-13T09:57:19.281+03:00 level=INFO source=:0 msg="Received message: task_deleted"
